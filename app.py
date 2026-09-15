@@ -2098,7 +2098,7 @@ if results is not None:
 
     st.dataframe(
         preprocessing,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -2193,7 +2193,7 @@ if results is not None:
 
         st.dataframe(
             segment_summary.round(2),
-            use_container_width=True
+            width="stretch"
         )
 
     # =====================================================
@@ -2437,7 +2437,7 @@ if results is not None:
 
         st.dataframe(
             display_results,
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
 
@@ -2600,7 +2600,7 @@ if results is not None:
 
         st.dataframe(
             importance_display,
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
 
@@ -2621,7 +2621,7 @@ if results is not None:
 
     st.dataframe(
         rfm.head(100),
-        use_container_width=True
+        width="stretch"
     )
 
     # =====================================================
@@ -2681,8 +2681,6 @@ if results is not None:
         "Python • Pandas • NumPy • Scikit-learn • "
         "Matplotlib • SQLite"
     )
-
-
 # =========================================================
 # INITIAL PAGE
 # =========================================================
@@ -2702,7 +2700,45 @@ else:
 
         `InvoiceNo` | `StockCode` | `Description` | `Quantity` |
         `InvoiceDate` | `UnitPrice` | `CustomerID` | `Country`
+        """
+    )
 
+    # ---------------------------------------------------------
+    # SAMPLE DATASET DOWNLOAD
+    # ---------------------------------------------------------
+
+    st.subheader("🧪 Try the Project with Sample Data")
+
+    st.write(
+        "Don't have an Excel dataset? Download the sample "
+        "Online Retail dataset and upload it above."
+    )
+
+    try:
+
+        with open(
+            "data/Sample_Online_Retail.xlsx",
+            "rb"
+        ) as sample_file:
+
+            st.download_button(
+                label="⬇️ Download Sample Excel Dataset",
+                data=sample_file,
+                file_name="Sample_Online_Retail.xlsx",
+                mime=(
+                    "application/vnd.openxmlformats-officedocument."
+                    "spreadsheetml.sheet"
+                )
+            )
+
+    except FileNotFoundError:
+
+        st.warning(
+            "Sample dataset is not available."
+        )
+
+    st.markdown(
+        """
         ### 🔬 Analysis Pipeline
 
         **Excel Upload**
