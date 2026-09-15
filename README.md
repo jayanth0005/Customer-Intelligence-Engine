@@ -2,6 +2,11 @@
 
 ## RFM-Based Customer Segmentation & Churn Prediction
 
+🌐 **Live Demo:** [Open Customer Intelligence Engine](https://customer-intelligence-engine-ofzl8er3ouyl4gnazz7fn6.streamlit.app/)
+
+💻 **GitHub Repository:** [View Source Code](https://github.com/jayanth0005/Customer-Intelligence-Engine)
+
+> Upload an Excel transaction dataset to perform RFM customer segmentation, churn analysis, machine-learning prediction, visualization, and downloadable PDF/CSV reporting.
 ### 1. Project Overview
 
 The **Customer Intelligence Engine** is a Python-based data analytics
