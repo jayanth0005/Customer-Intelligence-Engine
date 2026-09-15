@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment - DO NOT upload
+.venv/
+
+# VS Code
+.vscode/
